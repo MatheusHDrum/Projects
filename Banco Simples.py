@@ -2,7 +2,7 @@ import time
 
 while True:
     nome=str(input("Qual seu nome?")).upper()
-    if nome != "MAT":
+    if nome != "Matheus":
         print("Nome Incorreto, insira denovo")
         time.sleep(1)
     else:
