@@ -1,16 +1,16 @@
 import time
 
 while True:
-    pessoa=str(input("antes de começarmos,seu cliente é uma pessoa comum ou PM?(N/PM)")).upper()
+    pessoa=str(input("Antes de começarmos,seu cliente é uma pessoa comum ou algum Policial?(N/PM)")).upper()
 
     if pessoa not in ["N", "PM"]:
-        print("não entendi, responda apenas com 'N' ou 'PM'")
+        print("Não entendi, responda apenas com 'N' ou 'PM'")
         time.sleep(2)
     else:
         break
 
 def performace():
-    print("responda com 'S/N' se os itens foram colocados (ou não) no veículo")
+    print("Responda com 'S/N' se os itens foram colocados (ou não) no veículo")
 
     pp1=str(input("Motor")).upper()
     pp2=str(input("Cambio")).upper()
@@ -27,10 +27,10 @@ def performace():
     
     if pessoa=="N":
         total2=somapp
-        print("a soma deu {}".format(somapp))
+        print("A soma de todos os valores deram {}".format(somapp))
     elif pessoa=="PM":
          total2=somapp*0.8
-         print("a soma deu {}".format(somapp*0.8))
+         print("A soma de todos os valores deram {}".format(somapp*0.8))
     return total2
 
 def estetica():
@@ -42,30 +42,30 @@ def estetica():
     soma2= p1*3000 + p2*4000 + p3*2000
 
    
-    ptotal=str(input("o Veículo dele é nacional, importado ou do governo?(N,I,G")).upper()
+    ptotal=str(input("O Veículo dele é da categoria nacional, importado ou governamental?(N,I,G")).upper()
 
     if ptotal=="N":
         total= soma2
-        print("a soma das tunagens deu {}".format(soma2))
+        print("A soma das tunagens deu um total de {}".format(soma2))
 
     elif ptotal=="I":
         total= soma2*1.5
-        print("a soma das tunagens deu {}".format(soma2*1.5))
+        print("A soma das tunagens deu um total de {}".format(soma2*1.5))
 
     elif ptotal=="G":
         total= soma2*0.8
-        print("a soma das tunagens deu {}".format(soma2*0.8))
+        print("A soma das tunagens deu um total de {}".format(soma2*0.8))
     return total
 
-kit=int(input("Quantos kits?"))
-pneu=int(input("Quantos Pneus?"))              
+kit=int(input("Quantos kits de reparo o cliente precisa?"))
+pneu=int(input("Quantos Pneus o cliente precisa?"))              
 chave=int(input("Ele quis quantas chave(s) de roda?"))
-macaco=int(input("e macaco hidráulico, quantos?"))
+macaco=int(input("E macaco hidráulico, quantos ele pediu?"))
 soma1=(kit*2500 + pneu*1500 + chave*2000 + macaco*2000)
 if pessoa=="N":
-    print("a soma deu {}".format(soma1))
+    print("A soma de todos os valores deram {}".format(soma1))
 elif pessoa=="PM":
-    print("a soma deu {}".format(soma1*0.8))
+    print("A soma de todos os valores deram {}".format(soma1*0.8))
 
 ''
 tunar=str(input("Abrir tunagem? (S/N)")).upper()
@@ -92,10 +92,10 @@ if tunar=='S':
         elif moto3==2:
             total=estetica()
             total2=performace()
-    print("a soma total deu {}".format(total2+total))
+    print("A soma total deu {}".format(total2+total))
 
-else:
-    print("como decidiu não, acaba por aqui")
+elif tunar=='N':
+    print("Como decidiu não, acaba por aqui")
     exit()
 
 """
